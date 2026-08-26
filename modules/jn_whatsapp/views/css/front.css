@@ -1,0 +1,36 @@
+/* Botón flotante de WhatsApp */
+.jn-wa-btn{
+  position:fixed; right:20px; bottom:20px; z-index:1030;
+  width:64px; height:64px; border-radius:50%;
+  background:#25D366;
+  display:flex; align-items:center; justify-content:center;
+  box-shadow:0 10px 28px rgba(37,211,102,.45), 0 6px 16px rgba(0,0,0,.22);
+  transition:transform .15s ease, box-shadow .15s ease;
+}
+.jn-wa-btn::before{
+  content:''; position:absolute; inset:0; border-radius:50%;
+  background:#25D366; opacity:.5; z-index:-1;
+  animation:jn-wa-pulse 2.2s ease-out infinite;
+}
+@keyframes jn-wa-pulse{
+  0%   { transform:scale(1);    opacity:.5; }
+  70%  { transform:scale(1.6);  opacity:0;  }
+  100% { transform:scale(1.6);  opacity:0;  }
+}
+.jn-wa-btn:hover{
+  transform:scale(1.08);
+  box-shadow:0 14px 34px rgba(37,211,102,.55), 0 8px 20px rgba(0,0,0,.26);
+}
+.jn-wa-btn svg{ width:37px; height:37px; display:block; }
+@media (max-width: 767px){
+  .jn-wa-btn{
+    right:16px;
+    bottom:16px;
+    bottom:calc(16px + env(safe-area-inset-bottom, 0px));
+    width:58px; height:58px;
+  }
+  .jn-wa-btn svg{ width:33px; height:33px; }
+}
+@media (prefers-reduced-motion: reduce){
+  .jn-wa-btn::before{ animation:none; display:none; }
+}

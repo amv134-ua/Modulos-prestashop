@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>jn_import2forgebola</name>
+    <displayName><![CDATA[Importaci&oacute;n CSV &mdash; 2Forge / BOLA]]></displayName>
+    <version><![CDATA[3.0.0]]></version>
+    <description><![CDATA[Importa el cat&aacute;logo del proveedor (formato TWG): un producto por modelo con combinaciones Color &times; Pulgadas &times; Ancho, descripci&oacute;n autogenerada y stock en juegos de 4.]]></description>
+    <author><![CDATA[Repuestos Juanito]]></author>
+    <tab><![CDATA[administration]]></tab>
+    <is_configurable>1</is_configurable>
+    <need_instance>0</need_instance>
+</module>

@@ -1,0 +1,61 @@
+/* Formas de pago — Repuestos Juanito
+   Usa los colores del tema (juanito.css) con valores de reserva. */
+
+.jn-pagos{
+  margin: 18px 0 0;
+  padding: 14px 16px 15px;
+  border: 1px solid var(--jn-line, #e5e8ec);
+  border-radius: var(--jn-radius, 8px);
+  background: var(--jn-surface, #f4f6f8);
+}
+
+.jn-pagos__title{
+  display: flex; align-items: center; gap: 7px;
+  margin: 0 0 11px;
+  font-family: var(--jn-mono, monospace);
+  font-size: 11px; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--jn-muted, #6c7583);
+}
+.jn-pagos__title .material-icons{ font-size: 15px; color: var(--jn-red, #e01423); }
+
+.jn-pagos__list{
+  list-style: none; margin: 0; padding: 0;
+  display: flex; flex-wrap: wrap; gap: 8px;
+}
+
+.jn-pagos__item{
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 7px 11px;
+  border: 1px solid var(--jn-line-2, #d7dbe1);
+  border-radius: var(--jn-radius-sm, 5px);
+  background: #fff;
+  font-size: 13px; line-height: 1;
+  color: var(--jn-ink, #12151b);
+  white-space: nowrap;
+}
+.jn-pagos__item .material-icons{
+  font-size: 17px; color: var(--jn-muted, #6c7583);
+}
+
+/* un toque de color por método, sin usar logos de terceros */
+.jn-pagos__item--paypal .material-icons,
+.jn-pagos__item--paylater .material-icons{ color: #0070ba; }
+.jn-pagos__item--card .material-icons{ color: var(--jn-ink, #12151b); }
+.jn-pagos__item--bizum .material-icons{ color: #0aa5a5; }
+.jn-pagos__item--wire .material-icons{ color: var(--jn-muted, #6c7583); }
+
+@media (max-width: 575px){
+  .jn-pagos{ padding: 12px 13px 13px; }
+  .jn-pagos__item{ padding: 6px 9px; font-size: 12.5px; }
+}
+
+/* --- la marca de cada método, como icono junto al nombre -------------- */
+.jn-pagos__logo{
+  display: block;
+  height: 17px; width: 17px;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+/* Bizum y transferencia no traen marca: se quedan con el icono, y así
+   todas las fichas mantienen la misma altura */
+.jn-pagos__item{ min-height: 33px; }

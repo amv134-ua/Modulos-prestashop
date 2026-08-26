@@ -1,0 +1,135 @@
+/* Aviso de vacaciones — Repuestos Juanito
+   Usa los colores del tema (juanito.css) con valores de reserva
+   por si la hoja principal no estuviera cargada. */
+
+.jn-vac[hidden] { display: none !important; }
+
+.jn-vac {
+  position: fixed;
+  inset: 0;
+  z-index: 20000;              /* por encima de la cabecera fija (1000) */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.jn-vac__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(18, 21, 27, .62);
+  backdrop-filter: blur(2px);
+  animation: jnVacFade .18s ease-out;
+}
+
+.jn-vac__box {
+  position: relative;
+  width: 100%;
+  max-width: 460px;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  background: #fff;
+  border-radius: var(--jn-radius, 10px);
+  box-shadow: 0 18px 50px rgba(18, 21, 27, .32);
+  animation: jnVacIn .22s cubic-bezier(.2, .8, .3, 1);
+}
+
+/* franja superior con los colores de la marca */
+.jn-vac__stripe {
+  height: 5px;
+  background: linear-gradient(90deg,
+              var(--jn-red, #d0021b) 0%,
+              var(--jn-orange, #f5820b) 100%);
+  border-radius: var(--jn-radius, 10px) var(--jn-radius, 10px) 0 0;
+}
+
+.jn-vac__x {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(18, 21, 27, .06);
+  color: var(--jn-ink, #12151b);
+  font-size: 26px;
+  line-height: 30px;
+  cursor: pointer;
+  transition: background .15s ease, transform .15s ease;
+}
+.jn-vac__x:hover  { background: rgba(18, 21, 27, .13); }
+.jn-vac__x:active { transform: scale(.93); }
+.jn-vac__x:focus-visible { outline: 2px solid var(--jn-red, #d0021b); outline-offset: 2px; }
+
+.jn-vac__body { padding: 30px 34px 34px; text-align: center; }
+
+.jn-vac__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 66px;
+  height: 66px;
+  margin-bottom: 16px;
+  border-radius: 50%;
+  background: rgba(245, 130, 11, .12);
+  color: var(--jn-orange, #f5820b);
+}
+
+.jn-vac__title {
+  margin: 0 0 10px;
+  font-size: 25px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--jn-ink, #12151b);
+}
+
+.jn-vac__date {
+  margin: 0 0 14px;
+  font-size: 16px;
+  color: var(--jn-ink, #12151b);
+}
+.jn-vac__date strong { color: var(--jn-red, #d0021b); white-space: nowrap; }
+
+.jn-vac__text {
+  margin: 0 0 22px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: #5b6270;
+}
+
+.jn-vac__btn {
+  min-width: 160px;
+  padding: 12px 26px;
+  border: 0;
+  border-radius: var(--jn-radius, 10px);
+  background: var(--jn-ink, #12151b);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .15s ease, transform .15s ease;
+}
+.jn-vac__btn:hover  { background: var(--jn-red, #d0021b); }
+.jn-vac__btn:active { transform: translateY(1px); }
+.jn-vac__btn:focus-visible { outline: 2px solid var(--jn-red, #d0021b); outline-offset: 2px; }
+
+@keyframes jnVacFade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes jnVacIn {
+  from { opacity: 0; transform: translateY(14px) scale(.97); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* móvil */
+@media (max-width: 575px) {
+  .jn-vac       { padding: 14px; }
+  .jn-vac__body { padding: 26px 22px 28px; }
+  .jn-vac__title{ font-size: 22px; }
+  .jn-vac__btn  { width: 100%; }
+}
+
+/* quien haya pedido menos animación en su sistema */
+@media (prefers-reduced-motion: reduce) {
+  .jn-vac__box, .jn-vac__backdrop { animation: none; }
+}

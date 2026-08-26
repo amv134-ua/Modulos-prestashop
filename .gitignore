@@ -1,0 +1,20 @@
+# Datos de proveedores y de negocio: NUNCA subir
+var/
+*.csv
+*.xlsx
+*.zip
+
+# Respaldos y temporales
+*.bak
+*bak
+*.old
+*~
+*.log
+
+# Caché generada por PrestaShop
+cache/
+config.xml
+
+# Sistema
+.DS_Store
+Thumbs.db

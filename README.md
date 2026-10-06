@@ -16,11 +16,11 @@ dependencias externas) · CSS
 
 | Módulo | Qué hace | Líneas |
 |---|---|---:|
-| [`jn_import2forgebola`](modules/jn_import2forgebola) | Importador de catálogo de proveedor: agrupa 3.000 filas de CSV en productos con combinaciones, calcula precios por fórmula y genera descripciones | 1.021 |
-| [`jn_importsenco`](modules/jn_importsenco) | Segundo importador, para un proveedor con formato distinto; actualiza precio y stock **sin pisar** el trabajo editorial | 900 |
-| [`jn_vacaciones`](modules/jn_vacaciones) | Aviso emergente de cierre por vacaciones, con detección de entrada a la web y fecha de caducidad automática | 605 |
-| [`jn_pagos`](modules/jn_pagos) | Bloque de métodos de pago aceptados, con degradación elegante de los logotipos | 356 |
-| [`jn_whatsapp`](modules/jn_whatsapp) | Botón flotante de WhatsApp que precarga el producto en el mensaje | 206 |
+| [`jn_import2forgebola`](modules/jn_import2forgebola) | Importador de catálogo de proveedor: agrupa 3.000 filas de CSV en productos con combinaciones, calcula precios por fórmula y genera descripciones |
+| [`jn_importsenco`](modules/jn_importsenco) | Segundo importador, para un proveedor con formato distinto; actualiza precio y stock **sin pisar** el trabajo editorial |
+| [`jn_vacaciones`](modules/jn_vacaciones) | Aviso emergente de cierre por vacaciones, con detección de entrada a la web y fecha de caducidad automática |
+| [`jn_pagos`](modules/jn_pagos) | Bloque de métodos de pago aceptados, con degradación elegante de los logotipos | 
+| [`jn_whatsapp`](modules/jn_whatsapp) | Botón flotante de WhatsApp que precarga el producto en el mensaje | 
 
 Cada carpeta tiene su propio README con el detalle técnico.
 
@@ -28,7 +28,7 @@ Cada carpeta tiene su propio README con el detalle técnico.
 
 ## Lo más destacable
 
-**Dos importadores de catálogo (1.900 líneas).** Son el núcleo del proyecto.
+**Dos importadores de catálogo.** Son el núcleo del proyecto.
 Convierten las tarifas de dos proveedores —formatos, idiomas y monedas
 distintos— en productos publicables: agrupación en combinaciones, cálculo de
 precio con márgenes por tramos y redondeo comercial, conversión de unidades a

@@ -15,12 +15,12 @@ dependencias externas) · CSS
 ## Los módulos
 
 | Módulo | Qué hace |
-|---|---|---:|
+| :--- | :--- |
 | [`jn_import2forgebola`](modules/jn_import2forgebola) | Importador de catálogo de proveedor: agrupa 3.000 filas de CSV en productos con combinaciones, calcula precios por fórmula y genera descripciones |
 | [`jn_importsenco`](modules/jn_importsenco) | Segundo importador, para un proveedor con formato distinto; actualiza precio y stock **sin pisar** el trabajo editorial |
 | [`jn_vacaciones`](modules/jn_vacaciones) | Aviso emergente de cierre por vacaciones, con detección de entrada a la web y fecha de caducidad automática |
-| [`jn_pagos`](modules/jn_pagos) | Bloque de métodos de pago aceptados, con degradación elegante de los logotipos | 
-| [`jn_whatsapp`](modules/jn_whatsapp) | Botón flotante de WhatsApp que precarga el producto en el mensaje | 
+| [`jn_pagos`](modules/jn_pagos) | Bloque de métodos de pago aceptados, con degradación elegante de los logotipos |
+| [`jn_whatsapp`](modules/jn_whatsapp) | Botón flotante de WhatsApp que precarga el producto en el mensaje |
 
 Cada carpeta tiene su propio README con el detalle técnico.
 

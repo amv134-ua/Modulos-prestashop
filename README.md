@@ -14,7 +14,7 @@ dependencias externas) · CSS
 
 ## Los módulos
 
-| Módulo | Qué hace | Líneas |
+| Módulo | Qué hace |
 |---|---|---:|
 | [`jn_import2forgebola`](modules/jn_import2forgebola) | Importador de catálogo de proveedor: agrupa 3.000 filas de CSV en productos con combinaciones, calcula precios por fórmula y genera descripciones |
 | [`jn_importsenco`](modules/jn_importsenco) | Segundo importador, para un proveedor con formato distinto; actualiza precio y stock **sin pisar** el trabajo editorial |
